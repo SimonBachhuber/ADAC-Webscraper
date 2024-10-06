@@ -60,9 +60,10 @@ for div in main_divs:
                 
                 # Loop through the target divs and extract text from <p> elements with the specified class
                 for model in models_divs:
-                    model_name = model.find_all('p', class_="hyHcmC")
+                    model_name = model.find_all('p', class_="dMEK_RYMXzHdo4LnYdUq")
                     for p in model_name:
                         linked_p_texts.append(p.get_text(strip=True))
+                        print(p.get_text(strip=True))
                 
                 # Add to dictionary: key is the base <p> text, value is the list of texts from linked page
                 all_cars[maker_name] = linked_p_texts
